@@ -1,5 +1,6 @@
 import requests
-def get_result(url="https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=YourApiKeyToken"):
+api_token ="YourApiKeyToken"
+def get_result(url=f"https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey={api_token}"):
     result = requests.get(url)
     result_data = result.json()
     result = result_data["result"]
